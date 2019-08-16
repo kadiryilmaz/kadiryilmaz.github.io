@@ -1,6 +1,6 @@
 # main text of home
 name: Kadir Yılmaz
-bio: A Man who travels the world eating noodles
+bio: bakkal
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -35,7 +35,7 @@ disqus:
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
-twitter: twitter.com/kadiryilmaz
+twitter: kadiryilmaz
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
