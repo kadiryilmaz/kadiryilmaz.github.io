@@ -1,5 +1,5 @@
 # main text of home
-name: John Doe
+name: Kadir Yılmaz
 bio: A Man who travels the world eating noodles
 
 # twitter summary info
@@ -34,8 +34,8 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+#facebook: myfacebook
+twitter: twitter.com/kadiryilmaz
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
