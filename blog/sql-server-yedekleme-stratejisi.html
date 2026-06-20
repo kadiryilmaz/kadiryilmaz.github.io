@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL Server Yedekleme Stratejisi: Kurumsal Süreklilik İçin Temel Yaklaşım | Kadir Yılmaz</title>
+    <meta name="description" content="SQL Server yedekleme stratejisi; RPO, RTO, full, differential ve log backup, geri dönüş testi, izleme ve kurumsal süreklilik bakış açısıyla ele alınıyor.">
+    <meta name="author" content="Kadir Yılmaz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kadiryilmaz.net/blog/sql-server-yedekleme-stratejisi.html">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260620g">
+    <meta name="theme-color" content="#101828">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM8KKHKQE7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZM8KKHKQE7');
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Kadir Yılmaz">
+    <meta property="og:title" content="SQL Server Yedekleme Stratejisi: Kurumsal Süreklilik İçin Temel Yaklaşım">
+    <meta property="og:description" content="SQL Server yedekleme stratejisini RPO, RTO, geri dönüş testi ve operasyonel izleme açısından değerlendiren teknik not.">
+    <meta property="og:url" content="https://kadiryilmaz.net/blog/sql-server-yedekleme-stratejisi.html">
+    <meta property="og:image" content="https://kadiryilmaz.net/assets/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SQL Server Yedekleme Stratejisi">
+    <meta name="twitter:description" content="Kurumsal süreklilik için SQL Server yedekleme ve geri dönüş yaklaşımı.">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SQL Server Yedekleme Stratejisi: Kurumsal Süreklilik İçin Temel Yaklaşım",
+        "description": "SQL Server yedekleme stratejisi; RPO, RTO, full, differential ve log backup, geri dönüş testi, izleme ve kurumsal süreklilik bakış açısıyla ele alınıyor.",
+        "url": "https://kadiryilmaz.net/blog/sql-server-yedekleme-stratejisi.html",
+        "datePublished": "2026-06-20",
+        "dateModified": "2026-06-20",
+        "inLanguage": "tr-TR",
+        "author": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz",
+          "url": "https://kadiryilmaz.net/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://kadiryilmaz.net/blog/sql-server-yedekleme-stratejisi.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Kadir Yılmaz ana sayfa">
+          <span class="brand-mark" aria-hidden="true">KY</span>
+          <span>Kadir Yılmaz</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+          <span class="sr-only">Menüyü aç veya kapat</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Ana menü" data-site-nav>
+          <a href="/#hakkimda">Hakkımda</a>
+          <a href="/#uzmanliklar">Çalışma Alanları</a>
+          <a href="/#danismanlik">Danışmanlık</a>
+          <a href="/#yapay-zeka">Yapay Zekâ</a>
+          <a href="/#ozgecmis">Özgeçmiş</a>
+          <a href="/#notlar">Notlar</a>
+          <a href="/#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="icerik" class="article-main">
+      <article>
+        <header class="article-hero">
+          <div class="container">
+            <div class="article-meta-line">
+              <span>SQL Server</span>
+              <span>20 Haziran 2026</span>
+              <span>Teknik not</span>
+            </div>
+            <h1>SQL Server Yedekleme Stratejisi: Kurumsal Süreklilik İçin Temel Yaklaşım</h1>
+            <p>Yedekleme, yalnızca dosya üretmek değildir. SQL Server tarafında doğru strateji; iş sürekliliği hedefleri, geri dönüş süresi, veri kaybı toleransı ve düzenli test disipliniyle birlikte tasarlanmalıdır.</p>
+          </div>
+        </header>
+        <div class="container article-body">
+          <p class="article-breadcrumb"><a href="/#notlar">Teknik Notlar</a> / SQL Server</p>
+          <p>Kurumsal sistemlerde SQL Server çoğu zaman ERP, muhasebe, e-ticaret, raporlama ve özel yazılım geliştirme projelerinin merkezinde yer alır. Bu nedenle veritabanı yedekleme stratejisi teknik bir bakım görevi olarak değil, iş sürekliliğinin temel parçası olarak ele alınmalıdır. Bir yedekleme planı yalnızca başarılı çalışan job kayıtlarından ibaretse eksiktir. Asıl soru, ihtiyaç anında hangi noktaya, ne kadar sürede ve hangi doğrulukla geri dönülebileceğidir.</p>
+
+          <h2>RPO ve RTO olmadan strateji tamamlanmış sayılmaz</h2>
+          <p>Yedekleme planına başlamadan önce iki kavram netleşmelidir: RPO ve RTO. RPO, kurumun ne kadar veri kaybını tolere edebileceğini ifade eder. RTO ise sistemin ne kadar sürede tekrar çalışır hale gelmesi gerektiğini gösterir. Örneğin satış ve ERP operasyonlarının yoğun olduğu bir işletmede gün sonunda alınan tek bir full backup yeterli olmayabilir. Gün içinde oluşan sipariş, fatura, stok hareketi ve üretim kayıtlarının kaybı kabul edilemiyorsa differential backup veya transaction log backup senaryoları devreye girmelidir.</p>
+
+          <p>Bu kararın yalnızca BT tarafından verilmesi doğru değildir. Finans, operasyon, satış, depo ve yönetim ekiplerinin beklentileri alınmalı; hangi sistemin ne kadar kritik olduğu belirlenmelidir. Bazı raporlama veritabanları için birkaç saatlik kayıp kabul edilebilirken, canlı ERP veritabanında birkaç dakikalık kayıp bile ciddi sonuç doğurabilir. Bu ayrım yapılmadığında tüm sistemlere aynı yedekleme kurgusu uygulanır ve kaynaklar ya gereksiz tüketilir ya da kritik sistemler yeterince korunmaz.</p>
+
+          <h2>Full, differential ve log backup dengesi</h2>
+          <p>SQL Server yedekleme stratejisinde full backup temel başlangıç noktasıdır. Ancak büyük veritabanlarında yalnızca full backup ile ilerlemek depolama, süre ve ağ trafiği açısından verimsiz olabilir. Differential backup, son full backup’tan sonra değişen verileri kapsadığı için daha hızlı bir ara katman sağlar. Full backup haftalık, differential backup günlük, transaction log backup ise iş ihtiyacına göre daha sık çalışacak şekilde planlanabilir. Bu yapı, veri kaybı toleransını azaltırken geri dönüş senaryosunu da daha kontrollü hale getirir.</p>
+
+          <p>Transaction log backup kullanılan yapılarda recovery model seçimi kritik hale gelir. Full recovery model ile noktasal geri dönüş mümkün olabilir, ancak log zincirinin bozulmaması gerekir. Log dosyalarının kontrolsüz büyümesi, yedeklerin farklı lokasyonlara taşınmaması veya job hatalarının izlenmemesi bu zinciri zayıflatır. SQL Server bakım planı veya özel job yapısı kullanılsa da her adımın izlenebilir, raporlanabilir ve uyarı üretebilir olması gerekir.</p>
+
+          <p>Planlama yapılırken veritabanı büyüklüğü, bakım penceresi, disk performansı ve ağ kapasitesi de hesaba katılmalıdır. Çok büyük bir ERP veritabanında mesai saatinde çalışan full backup performans sorununa yol açabilir. Benzer şekilde sık log backup almak iyi bir hedef olsa da, bu dosyaların saklanacağı alan ve geri dönüş sırasında izlenecek sıra önceden düşünülmelidir.</p>
+
+          <div class="article-note">
+            <strong>Pratik not:</strong> Yedek dosyasının oluşması başarıdır, fakat geri yükleme testi yapılmamış bir yedekleme planı güvence değildir.
+          </div>
+
+          <h2>Geri dönüş testi planın en önemli parçasıdır</h2>
+          <p>Pek çok kurum yedekleme job’larının başarılı çalıştığını görerek kendini güvende hisseder. Oysa dosya bozuk olabilir, yetki sorunu yaşanabilir, hedef sunucuda yeterli disk alanı bulunmayabilir veya geri dönüş adımları ekip içinde bilinmiyor olabilir. Bu nedenle düzenli restore testleri yapılmalıdır. Test ortamında belirli periyotlarla full, differential ve log backup zinciri geri yüklenmeli; uygulama bağlantısı, kullanıcı yetkileri ve veri tutarlılığı kontrol edilmelidir.</p>
+
+          <p>Geri dönüş testleri aynı zamanda dokümantasyonu güçlendirir. Kriz anında hangi dosyanın nereden alınacağı, hangi sırayla restore edileceği, hangi kullanıcıların bilgilendirileceği ve uygulama tarafında hangi kontrollerin yapılacağı önceden yazılı olmalıdır. Bu doküman yalnızca BT ekibinin bildiği teknik bir metin olarak kalmamalı; karar vericilerin anlayacağı RTO ve RPO hedefleriyle ilişkilendirilmelidir.</p>
+
+          <h2>Depolama, güvenlik ve izleme birlikte düşünülmelidir</h2>
+          <p>Yedeklerin aynı sunucuda tutulması tek başına yeterli değildir. Disk arızası, fidye yazılımı, kullanıcı hatası veya fiziksel hasar gibi riskler için farklı lokasyon ve saklama politikaları gerekir. QNAP NAS, harici depolama, bulut replikasyon veya offline kopya gibi seçenekler kurumun bütçesi ve risk profiline göre değerlendirilebilir. Yedek dosyalarının yetkisiz erişime kapalı olması, gerektiğinde şifrelenmesi ve silinmeye karşı korunması da güvenlik tarafının parçasıdır.</p>
+
+          <p>İzleme katmanında job sonucu, dosya boyutu, süre, log büyümesi ve son başarılı yedek zamanı takip edilmelidir. Grafana, Power BI veya basit bildirim mekanizmalarıyla SQL Server yedekleme süreçleri görünür hale getirilebilir. Yönetim raporlamasına uygun özet göstergeler de eklenirse, yedekleme yalnızca BT’nin arka planda yürüttüğü bir görev olmaktan çıkar ve kurumsal süreklilik yönetiminin ölçülebilir bir bileşeni haline gelir.</p>
+
+          <p>Sonuç olarak sağlıklı bir SQL Server yedekleme stratejisi; doğru teknik tipleri seçmek, iş hedefleriyle uyumlu RPO/RTO belirlemek, düzenli restore testi yapmak ve izleme mekanizması kurmakla mümkündür. Bu disiplin sağlandığında ERP danışmanlığı, özel yazılım geliştirme ve dijital dönüşüm projeleri daha sağlam bir veri güvenliği zemini üzerinde ilerler.</p>
+
+          <section class="related-notes" aria-labelledby="related-sql-backup">
+            <h2 id="related-sql-backup">İlgili yazılar</h2>
+            <ul class="related-links">
+              <li><a href="/blog/logo-tiger-erp-mrp.html">Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış</a></li>
+              <li><a href="/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html">ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu</a></li>
+            </ul>
+          </section>
+
+          <p><a href="/#notlar">Tüm teknik notlara dön</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year></span> Kadir Yılmaz</p>
+        <div class="footer-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/humans.txt">Humans</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js?v=20260620f" defer></script>
+  </body>
+</html>

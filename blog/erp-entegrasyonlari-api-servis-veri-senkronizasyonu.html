@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu | Kadir Yılmaz</title>
+    <meta name="description" content="ERP entegrasyonlarında API, servis mimarisi, veri senkronizasyonu, hata yönetimi ve izlenebilirlik için teknik yaklaşım.">
+    <meta name="author" content="Kadir Yılmaz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kadiryilmaz.net/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260620g">
+    <meta name="theme-color" content="#101828">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM8KKHKQE7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZM8KKHKQE7');
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Kadir Yılmaz">
+    <meta property="og:title" content="ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu">
+    <meta property="og:description" content="ERP entegrasyonlarında veri sahipliği, API tasarımı, servis katmanı, hata yönetimi ve operasyonel izlenebilirlik üzerine teknik not.">
+    <meta property="og:url" content="https://kadiryilmaz.net/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html">
+    <meta property="og:image" content="https://kadiryilmaz.net/assets/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu">
+    <meta name="twitter:description" content="ERP entegrasyonlarında güvenilir veri akışı için teknik yaklaşım.">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu",
+        "description": "ERP entegrasyonlarında API, servis mimarisi, veri senkronizasyonu, hata yönetimi ve izlenebilirlik için teknik yaklaşım.",
+        "url": "https://kadiryilmaz.net/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html",
+        "datePublished": "2026-06-20",
+        "dateModified": "2026-06-20",
+        "inLanguage": "tr-TR",
+        "author": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz",
+          "url": "https://kadiryilmaz.net/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://kadiryilmaz.net/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Kadir Yılmaz ana sayfa">
+          <span class="brand-mark" aria-hidden="true">KY</span>
+          <span>Kadir Yılmaz</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+          <span class="sr-only">Menüyü aç veya kapat</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Ana menü" data-site-nav>
+          <a href="/#hakkimda">Hakkımda</a>
+          <a href="/#uzmanliklar">Çalışma Alanları</a>
+          <a href="/#danismanlik">Danışmanlık</a>
+          <a href="/#yapay-zeka">Yapay Zekâ</a>
+          <a href="/#ozgecmis">Özgeçmiş</a>
+          <a href="/#notlar">Notlar</a>
+          <a href="/#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="icerik" class="article-main">
+      <article>
+        <header class="article-hero">
+          <div class="container">
+            <div class="article-meta-line">
+              <span>Entegrasyon</span>
+              <span>20 Haziran 2026</span>
+              <span>Teknik not</span>
+            </div>
+            <h1>ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu</h1>
+            <p>ERP entegrasyonları yalnızca iki sistem arasında veri taşımak değildir. Güvenilir bir yapı için veri sahipliği, servis tasarımı, hata yönetimi, güvenlik ve izlenebilirlik birlikte düşünülmelidir.</p>
+          </div>
+        </header>
+        <div class="container article-body">
+          <p class="article-breadcrumb"><a href="/#notlar">Teknik Notlar</a> / Entegrasyon</p>
+          <p>Kurumsal yapılarda ERP sistemi çoğu zaman stok, cari, sipariş, fatura, satınalma ve üretim verisinin ana kaynağıdır. E-ticaret platformları, depo uygulamaları, saha satış araçları, raporlama sistemleri ve özel yazılım geliştirme projeleri bu veriye ihtiyaç duyar. Bu nedenle ERP entegrasyonları teknik olarak API çağrısı yazmaktan daha geniş bir konudur. Entegrasyonun başarısı, hangi verinin nerede üretildiği, hangi sistemin ana kaynak olduğu ve hatalı durumlarda operasyonun nasıl devam edeceği sorularına verilen cevaplara bağlıdır.</p>
+
+          <h2>Veri sahipliği ilk karar olmalıdır</h2>
+          <p>Entegrasyon projesine başlarken ilk yapılması gereken, her veri türü için sahiplik modelini netleştirmektir. Ürün kartı ERP’de mi oluşacak, yoksa e-ticaret tarafındaki katalog ERP’ye mi aktarılacak? Cari kart bilgileri muhasebe ekibi tarafından mı yönetilecek, yoksa CRM sistemi mi ana kaynak olacak? Stok miktarı anlık olarak ERP’den mi okunacak, yoksa ara tabloda mı tutulacak? Bu sorular cevaplanmadan yazılan servisler kısa sürede veri tutarsızlığı üretir.</p>
+
+          <p>Logo Tiger ERP, Logo GO veya farklı ERP sistemlerinde entegrasyon yapılırken her veri hareketinin operasyonel karşılığı düşünülmelidir. Örneğin e-ticaret siparişi ERP’ye aktarılırken müşteri, adres, ödeme tipi, kargo bilgisi ve stok rezervasyonu birlikte ele alınmalıdır. Sipariş başarılı aktarıldı fakat fatura oluşturulamadıysa sistem bunu nasıl gösterecek? Kullanıcı hatayı nereden görecek? Aynı sipariş ikinci kez gönderilirse çift kayıt nasıl engellenecek? Bu detaylar entegrasyon mimarisinin temelidir.</p>
+
+          <h2>API ve servis katmanı kontrollü olmalıdır</h2>
+          <p>API kullanımı entegrasyonlarda esneklik sağlar, ancak her API çağrısının doğrudan ERP tabanına etki etmesi doğru bir yaklaşım değildir. Sağlıklı yapılarda arada bir servis katmanı bulunur. Bu servis katmanı doğrulama, loglama, hata yakalama, yetkilendirme ve tekrar deneme mekanizmalarını yönetir. .NET Core, C#, Python veya Windows Service tabanlı yapılar bu amaçla kullanılabilir. Önemli olan teknolojiden çok, entegrasyon davranışının izlenebilir ve sürdürülebilir olmasıdır.</p>
+
+          <p>Servis tasarımında idempotency kavramı özellikle önemlidir. Aynı istek ağ sorunu nedeniyle tekrar gönderildiğinde sistem aynı işlemi ikinci kez yaratmamalıdır. Sipariş numarası, dış sistem referansı veya benzersiz işlem anahtarı gibi alanlarla tekrar kayıt riski azaltılabilir. Ayrıca servislerin başarısız işlem kuyruğu tutması, belirli hatalarda otomatik tekrar denemesi, kalıcı hatalarda ise kullanıcıya anlaşılır bildirim üretmesi gerekir. Bu yapı kurulmadığında entegrasyon çalışıyor gibi görünür, fakat operasyon ekibi arka planda manuel düzeltmelerle sistemi ayakta tutmaya çalışır.</p>
+
+          <p>Teknik ekip için burada en değerli kazanımlardan biri standart entegrasyon sözleşmesidir. Alan adları, veri tipleri, zorunlu bilgiler, hata kodları, zaman damgaları ve referans numaraları baştan tanımlanırsa yeni sistem eklemek kolaylaşır. Aksi halde her proje kendi özel kuralını üretir ve zaman içinde servis katmanı anlaşılması zor bir yapıya dönüşür.</p>
+
+          <div class="article-note">
+            <strong>Pratik not:</strong> İyi entegrasyon, başarılı işlemleri hızlı taşırken başarısız işlemleri de sessiz bırakmadan görünür hale getirir.
+          </div>
+
+          <h2>Senkron ve asenkron akışlar birlikte değerlendirilmeli</h2>
+          <p>Her veri hareketinin anlık yapılması gerekmez. Stok kontrolü veya ödeme onayı gibi bazı işlemler senkron cevap gerektirebilir. Buna karşılık ürün açıklaması, fiyat güncellemesi, raporlama verisi veya toplu cari aktarımı asenkron kuyruklarla daha sağlıklı yönetilebilir. Senkron akışlar kullanıcı deneyimi için önemlidir, fakat dış sistem yavaşladığında tüm operasyonu kilitleyebilir. Asenkron yapı ise daha dayanıklıdır, ancak izleme ve durum yönetimi gerektirir.</p>
+
+          <p>ERP danışmanlığı kapsamında bu ayrım net yapılmalıdır. Operasyonun gerçek zaman beklentisi ile teknik sistemlerin kapasitesi dengelenmelidir. Örneğin e-ticaret stok bilgisi her saniye ERP’den okunmak zorunda değildir; doğru tasarlanmış bir senkronizasyon aralığı ve kritik ürünler için özel kontrol mekanizması daha verimli olabilir. Buna karşılık satış siparişi oluşturma gibi kritik işlemlerde anlık doğrulama gerekebilir. Karar, iş riski ve teknik maliyet birlikte değerlendirilerek verilmelidir.</p>
+
+          <h2>İzlenebilirlik ve raporlama entegrasyonun parçasıdır</h2>
+          <p>Entegrasyonların sürdürülebilir olması için log kayıtları, işlem durumları, hata mesajları ve performans göstergeleri düzenli takip edilmelidir. SQL Server üzerinde işlem tabloları, servis logları ve özet raporlar tutulabilir. Grafana veya Power BI ile başarısız işlem sayısı, ortalama aktarım süresi, bekleyen kuyruk, sistem bazlı hata yoğunluğu ve son başarılı çalışma zamanı izlenebilir. Böylece sorun kullanıcı şikayetine dönüşmeden önce fark edilebilir.</p>
+
+          <p>Güvenlik de unutulmamalıdır. API anahtarları, kullanıcı yetkileri, bağlantı bilgileri ve servis hesapları kontrollü yönetilmelidir. Gereksiz geniş yetkiler yerine yalnızca ihtiyaç duyulan işlem kapsamı tanımlanmalıdır. Veri aktarımı sırasında kişisel veya ticari hassas bilgilerin korunması için şifreleme, erişim denetimi ve log maskeleme gibi konular değerlendirilmelidir. Yapay zekâ destekli senaryolarda da aynı kontrollü veri erişimi ihtiyacı öne çıkar; bu konuya <a href="/blog/microsoft-sql-mcp-server-data-api-builder.html">Microsoft SQL MCP Server ve Data API Builder</a> yazısında SQL Server ve kurumsal AI ajanları açısından değiniyorum.</p>
+
+          <p>Sonuç olarak ERP entegrasyonlarında kalıcı başarı, yalnızca veri aktarımının çalışmasına değil, veri sahipliği modelinin doğru kurulmasına, servis mimarisinin kontrollü olmasına ve hata yönetiminin görünür hale getirilmesine bağlıdır. API, servis ve veri senkronizasyonu doğru tasarlandığında dijital dönüşüm projeleri daha hızlı, güvenilir ve ölçülebilir ilerler.</p>
+
+          <section class="related-notes" aria-labelledby="related-integrations">
+            <h2 id="related-integrations">İlgili yazılar</h2>
+            <ul class="related-links">
+              <li><a href="/blog/microsoft-sql-mcp-server-data-api-builder.html">Microsoft SQL MCP Server ve Data API Builder</a></li>
+              <li><a href="/blog/logo-tiger-erp-mrp.html">Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış</a></li>
+            </ul>
+          </section>
+
+          <p><a href="/#notlar">Tüm teknik notlara dön</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year></span> Kadir Yılmaz</p>
+        <div class="footer-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/humans.txt">Humans</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js?v=20260620f" defer></script>
+  </body>
+</html>

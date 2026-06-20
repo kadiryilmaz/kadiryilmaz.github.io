@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış | Kadir Yılmaz</title>
+    <meta name="description" content="Logo Tiger ERP’de MRP süreçleri; stok, talep, satınalma, üretim planlama, veri kalitesi ve raporlama açısından teknik bir bakışla ele alınıyor.">
+    <meta name="author" content="Kadir Yılmaz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kadiryilmaz.net/blog/logo-tiger-erp-mrp.html">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260620g">
+    <meta name="theme-color" content="#101828">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM8KKHKQE7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZM8KKHKQE7');
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Kadir Yılmaz">
+    <meta property="og:title" content="Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış">
+    <meta property="og:description" content="Logo Tiger ERP’de MRP kurgusunu veri kalitesi, stok, talep, satınalma ve raporlama ekseninde değerlendiren teknik başlangıç yazısı.">
+    <meta property="og:url" content="https://kadiryilmaz.net/blog/logo-tiger-erp-mrp.html">
+    <meta property="og:image" content="https://kadiryilmaz.net/assets/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış">
+    <meta name="twitter:description" content="MRP süreçlerini ERP, veri kalitesi ve kurumsal raporlama açısından ele alan Türkçe teknik not.">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış",
+        "description": "Logo Tiger ERP’de MRP süreçleri; stok, talep, satınalma, üretim planlama, veri kalitesi ve raporlama açısından teknik bir bakışla ele alınıyor.",
+        "url": "https://kadiryilmaz.net/blog/logo-tiger-erp-mrp.html",
+        "datePublished": "2026-06-20",
+        "dateModified": "2026-06-20",
+        "inLanguage": "tr-TR",
+        "author": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz",
+          "url": "https://kadiryilmaz.net/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://kadiryilmaz.net/blog/logo-tiger-erp-mrp.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Kadir Yılmaz ana sayfa">
+          <span class="brand-mark" aria-hidden="true">KY</span>
+          <span>Kadir Yılmaz</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+          <span class="sr-only">Menüyü aç veya kapat</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Ana menü" data-site-nav>
+          <a href="/#hakkimda">Hakkımda</a>
+          <a href="/#uzmanliklar">Çalışma Alanları</a>
+          <a href="/#danismanlik">Danışmanlık</a>
+          <a href="/#yapay-zeka">Yapay Zekâ</a>
+          <a href="/#ozgecmis">Özgeçmiş</a>
+          <a href="/#notlar">Notlar</a>
+          <a href="/#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="icerik" class="article-main">
+      <article>
+        <header class="article-hero">
+          <div class="container">
+            <div class="article-meta-line">
+              <span>ERP ve MRP</span>
+              <span>20 Haziran 2026</span>
+              <span>Teknik not</span>
+            </div>
+            <h1>Logo Tiger ERP’de MRP Süreçlerine Teknik Bir Bakış</h1>
+            <p>MRP yalnızca satınalma önerisi üreten bir hesaplama değildir. Doğru kurgulandığında stok, talep, üretim, planlama ve finansal beklentileri aynı veri zemini üzerinde buluşturan bir karar destek mekanizmasına dönüşür.</p>
+          </div>
+        </header>
+        <div class="container article-body">
+          <p class="article-breadcrumb"><a href="/#notlar">Teknik Notlar</a> / ERP ve MRP</p>
+          <p>Logo Tiger ERP kullanan işletmelerde MRP süreci çoğu zaman stok hareketleri, açık siparişler ve malzeme ihtiyaçları üzerinden konuşulur. Ancak gerçek değer, sistemin hangi veriye güvendiği ve bu veriyi nasıl yorumladığı anlaşıldığında ortaya çıkar. MRP modülünün başarılı çalışması için ürün ağaçları, stok kartları, tedarik süreleri, minimum ve maksimum stok seviyeleri, sipariş politikaları ve açık talep kayıtları tutarlı olmalıdır. Bu alanlardan biri eksik ya da güncel değilse, sistem teknik olarak çalışsa bile ortaya çıkan öneriler operasyon tarafından güvenilir bulunmayabilir.</p>
+
+          <h2>MRP’nin merkezinde veri kalitesi vardır</h2>
+          <p>MRP hesaplamasında ilk bakılması gereken konu ana veri düzenidir. Stok kartlarında birim setleri, temin süreleri, tedarikçi ilişkileri ve ürün grupları doğru tanımlanmadığında satınalma planı gerçek hayattaki teslim süreleriyle uyumsuz hale gelir. Ürün ağacı kullanılan yapılarda ise bileşen miktarları, fire oranları ve revizyon bilgileri önem kazanır. Logo Tiger ERP’de bu bilgilerin yalnızca kayıtlı olması yetmez; süreç sahipleri tarafından düzenli olarak kontrol edilmesi gerekir. Çünkü MRP, geçmişte yanlış girilmiş bir parametreyi sorgulamaz, onu kabul ederek sonuç üretir.</p>
+
+          <p>Veri kalitesinin ikinci boyutu hareket verisidir. Açık satış siparişleri, üretim emirleri, satınalma siparişleri, depo transferleri ve rezervasyonlar MRP önerilerini doğrudan etkiler. Kullanıcıların sipariş kapatma, teslim alma, iptal ve revizyon işlemlerini zamanında yapmaması stok ihtiyacını olduğundan fazla ya da az gösterebilir. Bu nedenle ERP danışmanlığı yalnızca ekran anlatımıyla sınırlı kalmamalı; günlük operasyonun hangi veriyi ne zaman güncellediğini de süreç tasarımına dahil etmelidir.</p>
+
+          <h2>Planlama senaryosu teknik parametrelerle şekillenir</h2>
+          <p>MRP çalıştırılırken dönem aralığı, depo kapsamı, sipariş türleri ve ihtiyaç kaynakları gibi parametreler belirleyicidir. Aynı veri setiyle farklı planlama senaryoları üretmek mümkündür. Örneğin kısa vadeli üretim ihtiyacı için daha dar bir zaman penceresi seçilirken, satınalma bütçesi ve tedarik kapasitesi için daha geniş bir dönem kullanılabilir. Burada amaç, tek bir raporu herkes için doğru kabul etmek değil, farklı karar seviyeleri için anlamlı senaryolar oluşturmaktır.</p>
+
+          <p>Logo Tiger ERP entegrasyonlarında MRP’nin çevre sistemlerle ilişkisi de önemlidir. E-ticaret siparişleri, saha satış talepleri, depo uygulamaları veya dış üretim planlama araçları ERP’ye veri gönderiyorsa, bu verinin statüsü ve zamanlaması net olmalıdır. API veya servis üzerinden gelen her talep doğrudan satınalma ihtiyacı yaratmalı mı, yoksa onay sürecinden sonra mı planlamaya dahil edilmeli? Bu karar teknik bir entegrasyon sorusu gibi görünür, fakat aslında operasyon politikasıdır. Bu bağlamda <a href="/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html">ERP entegrasyonlarında API, servis ve veri senkronizasyonu</a> konusu MRP kurgusunun çevre sistemlerle ilişkisini anlamak için tamamlayıcı bir başlıktır.</p>
+
+          <p>Bu nedenle canlıya geçişten önce küçük ve kontrollü deneme senaryoları hazırlanmalıdır. Kritik ürünler, uzun tedarik süreli kalemler, hızlı tüketilen stoklar ve dönemsel talep değişimi olan ürünler ayrı ayrı incelenirse MRP çıktısının gerçek operasyonla ne kadar uyumlu olduğu daha erken anlaşılır. Böylece kullanıcı güveni oluşmadan büyük ölçekli kararlar alınmaz.</p>
+
+          <div class="article-note">
+            <strong>Pratik not:</strong> MRP çıktısını iyileştirmenin en hızlı yolu çoğu zaman yeni rapor yazmak değil, ana veri ve açık işlem disiplinini güçlendirmektir.
+          </div>
+
+          <h2>Raporlama ve izlenebilirlik olmadan süreç eksik kalır</h2>
+          <p>MRP sonuçlarının operasyon tarafından benimsenmesi için raporlama katmanı kritik öneme sahiptir. Planlama ekibi hangi malzemenin neden önerildiğini, hangi siparişin ihtiyacı tetiklediğini ve mevcut stokla beklenen girişlerin nasıl değerlendirildiğini görebilmelidir. SQL Server üzerinde hazırlanacak kontrollü sorgular, Logo Tiger ERP verisini daha anlaşılır hale getirebilir. Grafana veya Power BI gibi araçlarla açık ihtiyaçlar, kritik stoklar, tedarikçi bazlı bekleyen siparişler ve geciken teslimatlar görselleştirilebilir.</p>
+
+          <p>Bu noktada dikkat edilmesi gereken konu, raporun ERP’nin yerine geçmemesidir. Raporlama karar destek sağlar; ana kayıt ve işlem disiplini ERP içinde kalmalıdır. Aksi halde ekipler farklı Excel dosyalarında alternatif gerçeklikler üretmeye başlar. Sağlıklı bir dijital dönüşüm yaklaşımı, Logo Tiger ERP’yi ana veri kaynağı olarak konumlandırır ve raporlama katmanını bu kaynağı açıklayan, izleyen ve hızlandıran bir araç olarak kullanır.</p>
+
+          <h2>Sürdürülebilir MRP için sahiplik modeli gerekir</h2>
+          <p>MRP kurulumunun canlıya alınması bir bitiş noktası değildir. Ürün gamı değiştikçe, tedarik süreleri uzadıkça, depo yapısı farklılaştıkça ve üretim planı olgunlaştıkça sistem parametrelerinin gözden geçirilmesi gerekir. Bu nedenle süreç sahibi, teknik sorumlu ve operasyon kullanıcıları arasında net bir rol dağılımı olmalıdır. BT ekibi SQL Server, entegrasyon, performans ve raporlama tarafını güvence altına alırken; planlama ve satınalma ekipleri ana veri doğruluğu ve günlük işlem disiplinini sahiplenmelidir.</p>
+
+          <p>Sonuç olarak Logo Tiger ERP’de MRP, doğru kurgulandığında yalnızca ihtiyaç listesi üreten bir modül değil, kurumun stok, satınalma ve planlama kararlarını daha ölçülebilir hale getiren stratejik bir yapıdır. Başarı; teknik kurulum, veri kalitesi, süreç sahipliği ve anlaşılır raporlamanın birlikte yönetilmesine bağlıdır. Bu bütünlük sağlandığında MRP, dijital dönüşüm yol haritasının en somut kazanımlarından biri haline gelir.</p>
+
+          <section class="related-notes" aria-labelledby="related-logo-mrp">
+            <h2 id="related-logo-mrp">İlgili yazılar</h2>
+            <ul class="related-links">
+              <li><a href="/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html">ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu</a></li>
+              <li><a href="/blog/sql-server-yedekleme-stratejisi.html">SQL Server Yedekleme Stratejisi</a></li>
+            </ul>
+          </section>
+
+          <p><a href="/#notlar">Tüm teknik notlara dön</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year></span> Kadir Yılmaz</p>
+        <div class="footer-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/humans.txt">Humans</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js?v=20260620f" defer></script>
+  </body>
+</html>

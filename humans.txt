@@ -1,0 +1,11 @@
+/* TEAM */
+Owner: Kadir Yılmaz
+Site: https://kadiryilmaz.net/
+Contact: kadir@kadiryilmaz.net
+
+/* SITE */
+Language: Turkish
+Purpose: Personal portfolio, technical notes, and professional contact
+Stack: Static HTML, CSS, and minimal JavaScript
+Hosting target: GitHub Pages
+Privacy: No analytics or tracking scripts by default

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kadiryilmaz.net/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kadiryilmaz.net/blog/logo-tiger-erp-mrp.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kadiryilmaz.net/blog/sql-server-yedekleme-stratejisi.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kadiryilmaz.net/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kadiryilmaz.net/blog/microsoft-sql-mcp-server-data-api-builder.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>

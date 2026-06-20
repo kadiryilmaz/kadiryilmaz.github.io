@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Microsoft SQL MCP Server ve Data API Builder | Kadir Yılmaz</title>
+    <meta name="description" content="Microsoft SQL MCP Server ve Data API Builder yaklaşımını; Model Context Protocol, SQL Server, kurumsal AI ajanları, ERP verisi ve güvenli veri erişimi açısından değerlendiren Türkçe teknik not.">
+    <meta name="author" content="Kadir Yılmaz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kadiryilmaz.net/blog/microsoft-sql-mcp-server-data-api-builder.html">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260620g">
+    <meta name="theme-color" content="#101828">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM8KKHKQE7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZM8KKHKQE7');
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Kadir Yılmaz">
+    <meta property="og:title" content="Microsoft SQL MCP Server ve Data API Builder">
+    <meta property="og:description" content="Microsoft SQL MCP Server ve Data API Builder yaklaşımını; Model Context Protocol, SQL Server, kurumsal AI ajanları, ERP verisi ve güvenli veri erişimi açısından değerlendiren Türkçe teknik not.">
+    <meta property="og:url" content="https://kadiryilmaz.net/blog/microsoft-sql-mcp-server-data-api-builder.html">
+    <meta property="og:image" content="https://kadiryilmaz.net/assets/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Microsoft SQL MCP Server ve Data API Builder">
+    <meta name="twitter:description" content="SQL Server, Data API Builder, Model Context Protocol ve kurumsal AI ajanları için kontrollü veri erişimi üzerine teknik not.">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Microsoft SQL MCP Server ve Data API Builder: Kurumsal AI Ajanları İçin Yeni Bir Veri Erişim Yaklaşımı",
+        "description": "Microsoft SQL MCP Server ve Data API Builder yaklaşımını; Model Context Protocol, SQL Server, kurumsal AI ajanları, ERP verisi ve güvenli veri erişimi açısından değerlendiren Türkçe teknik not.",
+        "url": "https://kadiryilmaz.net/blog/microsoft-sql-mcp-server-data-api-builder.html",
+        "image": "https://kadiryilmaz.net/assets/profile.jpg",
+        "datePublished": "2026-06-20",
+        "dateModified": "2026-06-20",
+        "inLanguage": "tr-TR",
+        "keywords": [
+          "Microsoft SQL MCP Server",
+          "Data API Builder",
+          "Model Context Protocol",
+          "SQL Server",
+          "Kurumsal AI ajanları",
+          "ERP verisi",
+          "Logo Tiger ERP",
+          "Yapay zekâ destekli karar destek",
+          "Güvenli veri erişimi"
+        ],
+        "about": [
+          "Microsoft SQL MCP Server",
+          "Data API Builder",
+          "Model Context Protocol",
+          "SQL Server",
+          "Kurumsal AI ajanları",
+          "ERP verisi",
+          "Logo Tiger ERP",
+          "Yapay zekâ destekli karar destek",
+          "Güvenli veri erişimi"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz",
+          "url": "https://kadiryilmaz.net/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kadir Yılmaz"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://kadiryilmaz.net/blog/microsoft-sql-mcp-server-data-api-builder.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Kadir Yılmaz ana sayfa">
+          <span class="brand-mark" aria-hidden="true">KY</span>
+          <span>Kadir Yılmaz</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+          <span class="sr-only">Menüyü aç veya kapat</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Ana menü" data-site-nav>
+          <a href="/#hakkimda">Hakkımda</a>
+          <a href="/#uzmanliklar">Çalışma Alanları</a>
+          <a href="/#danismanlik">Danışmanlık</a>
+          <a href="/#yapay-zeka">Yapay Zekâ</a>
+          <a href="/#ozgecmis">Özgeçmiş</a>
+          <a href="/#notlar">Notlar</a>
+          <a href="/#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="icerik" class="article-main">
+      <article>
+        <header class="article-hero">
+          <div class="container">
+            <div class="article-meta-line">
+              <span>Yapay Zekâ</span>
+              <span>20 Haziran 2026</span>
+              <span>Teknik not</span>
+            </div>
+            <h1>Microsoft SQL MCP Server ve Data API Builder: Kurumsal AI Ajanları İçin Yeni Bir Veri Erişim Yaklaşımı</h1>
+            <p>Kurumsal AI ajanlarının ERP ve SQL Server gibi veri kaynaklarıyla konuşması artık daha gerçekçi bir ihtiyaç. Asıl konu modelin SQL yazması değil; güvenli, yetkili, izlenebilir ve kontrollü veri erişiminin nasıl tasarlanacağı.</p>
+          </div>
+        </header>
+        <div class="container article-body">
+          <p class="article-breadcrumb"><a href="/#notlar">Teknik Notlar</a> / Yapay Zekâ</p>
+          <p>Kurumsal yapılarda yapay zekâ destekli asistanlar konuşulurken ilk beklenti çoğu zaman basit görünür: Kullanıcı doğal dille soru sorsun, sistem ERP ya da SQL Server verisinden anlamlı bir yanıt üretsin. Fakat bu senaryonun sahadaki asıl zorluğu, modelin bir sorgu cümlesi üretmesinden çok daha geniştir. Hangi tabloya erişilecek, hangi kullanıcı hangi veriyi görecek, işlem logları nasıl tutulacak, yanlış veya eksik veri nasıl fark edilecek, yazma işlemleri nerede sınırlandırılacak? Bu sorular yanıtlanmadan kurumsal AI ajanını canlı veriye yaklaştırmak riskli olabilir.</p>
+
+          <p>Microsoft’un <a href="https://learn.microsoft.com/tr-tr/azure/data-api-builder/mcp/">SQL MCP Server</a> yaklaşımı bu nedenle dikkat çekici. SQL Server ve benzeri veritabanlarıyla çalışan AI ajanları için Model Context Protocol üzerinden daha kontrollü bir araç yüzeyi sunmayı hedefliyor. Bunu da Data API Builder mimarisi üzerine kurarak, veritabanını doğrudan ve sınırsız biçimde modele açmak yerine tanımlı varlıklar, izinler ve izlenebilir işlemler üzerinden yönetilebilir hale getirmeye odaklanıyor.</p>
+
+          <h2>SQL MCP Server neyi hedefliyor?</h2>
+          <p>Model Context Protocol, AI ajanlarının dış araçları bulması ve çağırması için standart bir sözleşme sunar. Bir araç; kayıt okuma, kayıt oluşturma veya belirli bir operasyonu çalıştırma gibi sınırları tanımlı bir işlem olabilir. SQL MCP Server bu yaklaşımı SQL veritabanlarına taşır. Böylece ajan, veritabanına sınırsız SQL gönderen belirsiz bir katman gibi davranmak yerine, önceden yapılandırılmış veri varlıklarını ve işlemleri kullanır.</p>
+
+          <p>Bu ayrım önemlidir. Doğal dilden SQL üretmek her zaman öngörülebilir değildir; özellikle ERP veritabanlarında tablo ilişkileri, özel alanlar, muhasebe mantığı, tarih filtreleri ve yetki sınırları karmaşık olabilir. SQL MCP Server’ın Data API Builder üzerine kurulması, veritabanı varlıklarının API benzeri kontrollü bir katmanda tanımlanmasını sağlar. Bu yaklaşım; REST, GraphQL ve MCP yüzeylerinin aynı veri modeli ve izin anlayışı üzerinden ilerlemesine imkân verebilir.</p>
+
+          <h2>Kurumsal veri erişiminde neden önemli?</h2>
+          <p>ERP, cari, stok, sipariş, fatura, satınalma, planlama ve raporlama verileri kurumun operasyonel hafızasıdır. Bu verilerin tamamını bir AI ajanına doğrudan açmak pratik görünse de güvenlik ve yönetişim açısından sağlıklı değildir. Kullanıcının departmanı, rolü, sorumluluğu ve veri görme yetkisi dikkate alınmadan üretilen yanıtlar hem hatalı karar riskini hem de veri gizliliği riskini artırır.</p>
+
+          <p>Bu noktada yalnızca “okuma” işlemi bile dikkat ister. Bir satış kullanıcısı toplam stok miktarını görebilir mi, tedarikçi maliyetlerini görebilir mi, vadesi geçmiş cari bilgilerine erişebilir mi? Yönetim raporlaması için kullanılan özet verilerle operasyonel kayıtlar aynı yetkiyle mi sunulmalı? SQL MCP Server ve Data API Builder gibi katmanlar, bu sorulara doğrudan cevap vermez; fakat kontrollü cevap tasarlamak için daha uygun bir mimari zemin sağlar.</p>
+
+          <h2>Logo Tiger ERP ve SQL Server perspektifi nasıl ele alınmalı?</h2>
+          <p>Türkiye’de birçok kurumda ERP verisi SQL Server üzerinde anlamlı bir veri zemini oluşturur. Logo Tiger ERP gibi sistemlerde stok, cari, sipariş, fatura, üretim, satınalma ve muhasebe verileri raporlama açısından güçlü bir kaynak olabilir. Ancak doğrudan tablo erişimi her zaman dikkatli ele alınmalıdır. ERP veritabanındaki tablo adları, ilişki mantığı ve işlem bütünlüğü uygulama seviyesindeki kurallarla birlikte anlam kazanır.</p>
+
+          <p>Bu nedenle AI ajanının doğrudan veritabanına sınırsız erişmesi yerine, kontrollü API veya Data API Builder benzeri bir katman üzerinden ilerlemesi daha sağlıklı bir yaklaşımdır. Örneğin yalnızca raporlama amacıyla hazırlanmış görünümler, belirli stored procedure’ler veya kısıtlanmış veri varlıkları açılabilir. Böylece ajan, Logo Tiger ERP verisini iş süreçlerine zarar vermeden, yetkili ve izlenebilir bir çerçevede kullanabilir. Bu yaklaşım ana sayfadaki <a href="/#yapay-zeka">Yapay Zekâ Destekli Kurumsal Sistemler</a> bölümünde yer verdiğim karar destek senaryolarıyla da uyumludur.</p>
+
+          <h2>MCP, Data API Builder ve kurumsal AI mimarisi nasıl birlikte düşünülür?</h2>
+          <p>Data API Builder, SQL Server dahil farklı veritabanları için REST ve GraphQL uçları oluşturabilen bir katman olarak konumlanır. MCP desteğiyle birlikte bu katmanın AI ajanları tarafından daha standart bir protokol üzerinden kullanılabilmesi mimari açıdan değerlidir. Çünkü kurum içinde geliştirilen AI asistanları, her veritabanı için ayrı ve dağınık entegrasyon mantıkları yerine tanımlı araçlar üzerinden çalışabilir.</p>
+
+          <p>Bu yapı Semantic Kernel, yerel LLM denemeleri veya kurum içi operasyon asistanlarıyla birlikte düşünülebilir. Örneğin bir iç kullanıcı “geciken satınalma siparişlerini özetler misin?” diye sorduğunda, sistemin hangi kaynaktan veri okuyacağı, hangi alanları kullanacağı ve hangi yetkiyle işlem yapacağı önceden belirlenmiş olmalıdır. Yerel model kullanımı da bazı kurumlar için veri mahremiyeti açısından anlamlı olabilir; ancak yerel model kullanmak tek başına güvenlik anlamına gelmez. Yetkilendirme, loglama ve veri sınırları yine tasarımın parçası olmalıdır.</p>
+
+          <h2>Dikkat edilmesi gereken noktalar nelerdir?</h2>
+          <p>Kurumsal AI ajanlarında ilk güvenlik katmanı kimlik doğrulama ve rol bazlı yetkilendirmedir. Her kullanıcı aynı veri yüzeyine erişmemelidir. Okuma ve yazma işlemleri ayrılmalı, mümkünse ilk senaryolar yalnızca okuma ve raporlama odaklı başlamalıdır. Yazma işlemleri gerekiyorsa onay akışı, işlem günlüğü ve geri alma senaryoları ayrıca ele alınmalıdır.</p>
+
+          <p>Loglama ve izlenebilirlik de kritik başlıklardır. Ajan hangi aracı çağırdı, hangi parametrelerle çağırdı, hangi kullanıcı adına çalıştı ve hangi sonucu döndürdü? Bu kayıtlar olmadan kurumsal güven tesis etmek zordur. Rate limit, veri maskeleme, test ortamı, yalnızca gerekli varlıkların açılması ve AI yanıtlarının doğrulanabilir olması da tasarımın parçası olmalıdır. Özellikle kişisel veri, finansal bilgi veya ticari hassasiyet içeren alanlarda model yanıtının görünür olması kadar, hangi veriden üretildiğinin anlaşılabilir olması da önemlidir.</p>
+
+          <p>Sonuç olarak SQL MCP Server ve Data API Builder yaklaşımı, kurumsal AI ajanlarını SQL verisiyle daha kontrollü buluşturmak için önemli bir adım olarak değerlendirilebilir. ERP, raporlama ve karar destek senaryolarında asıl değer; modelin ne kadar iddialı konuştuğunda değil, veriye hangi sınırlar içinde, hangi yetkiyle ve ne kadar izlenebilir şekilde eriştiğinde ortaya çıkar. ERP, veri, yazılım ve yapay zekâ destekli karar destek sistemlerini birlikte değerlendirmek, bu nedenle daha sürdürülebilir bir kurumsal teknoloji yaklaşımı sunar.</p>
+
+          <section class="related-notes" aria-labelledby="related-ai-mcp">
+            <h2 id="related-ai-mcp">İlgili yazılar</h2>
+            <ul class="related-links">
+              <li><a href="/blog/erp-entegrasyonlari-api-servis-veri-senkronizasyonu.html">ERP Entegrasyonlarında API, Servis ve Veri Senkronizasyonu</a></li>
+              <li><a href="/blog/sql-server-yedekleme-stratejisi.html">SQL Server Yedekleme Stratejisi</a></li>
+            </ul>
+          </section>
+
+          <p><a href="/#notlar">Tüm teknik notlara dön</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year></span> Kadir Yılmaz</p>
+        <div class="footer-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/humans.txt">Humans</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js?v=20260620f" defer></script>
+  </body>
+</html>
