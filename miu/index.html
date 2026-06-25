@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIU Beauty | Ataşehir Güzellik Merkezi</title>
+    <meta
+      name="description"
+      content="MIU Beauty, Ataşehir'de manikür, pedikür, ipek kirpik ve kirpik lifting hizmetlerinde uzman butik güzellik merkezi."
+    />
+    <meta name="keywords" content="MIU Beauty, Ataşehir güzellik merkezi, manikür, pedikür, ipek kirpik, kirpik lifting" />
+    <meta name="author" content="MIU Beauty" />
+    <meta name="theme-color" content="#080727" />
+
+    <meta property="og:title" content="MIU Beauty | Ataşehir Güzellik Merkezi" />
+    <meta
+      property="og:description"
+      content="Zarif, hijyenik ve profesyonel bakım deneyimi. Manikür, pedikür, ipek kirpik ve kirpik lifting hizmetleri."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.png" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="MIU Beauty ana sayfa">
+        <img src="assets/logo.png" alt="MIU Beauty logo" />
+      </a>
+
+      <nav class="site-nav" data-nav aria-label="Ana menü">
+        <a href="#home" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="#services" data-i18n="nav.services">Hizmetler</a>
+        <a href="#gallery" data-i18n="nav.gallery">Galeri</a>
+        <a href="#booking" data-i18n="nav.booking">Randevu</a>
+        <a href="#location" data-i18n="nav.location">Konum</a>
+        <a href="#contact" data-i18n="nav.contact">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switcher" aria-label="Dil seçimi">
+          <button class="lang-button is-active" type="button" data-lang="tr" aria-label="Türkçe">TR</button>
+          <button class="lang-button" type="button" data-lang="en" aria-label="English">EN</button>
+        </div>
+
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Menüyü aç" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">MIU Beauty Ataşehir</p>
+          <h1 id="hero-title" data-i18n="hero.title">Zarif Dokunuşlarla Güzelliğinizi Ön Plana Çıkarın</h1>
+          <p class="hero-copy" data-i18n="hero.copy">
+            Manikür, pedikür, ipek kirpik ve kirpik lifting hizmetlerinde uzman MIU Beauty’ye hoş geldiniz.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#booking" data-i18n="hero.ctaBooking">Randevu Al</a>
+            <a
+              class="button button-ghost"
+              href="https://www.instagram.com/miubeauty.tr/"
+              target="_blank"
+              rel="noopener"
+              data-i18n="hero.ctaInstagram"
+            >
+              Instagram’da Gör
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-inner split-layout">
+          <div class="section-copy reveal">
+            <p class="section-kicker" data-i18n="about.kicker">Hakkımızda</p>
+            <h2 id="about-title" data-i18n="about.title">Ataşehir’de butik ve özenli bakım deneyimi</h2>
+            <p data-i18n="about.copy">
+              MIU Beauty, kaliteli ürünlerle çalışan; hijyen, güven ve müşteri memnuniyetini merkeze alan butik bir
+              güzellik merkezidir. Her uygulamada doğal güzelliğinizi destekleyen zarif ve profesyonel bir yaklaşım
+              sunar.
+            </p>
+          </div>
+
+          <div class="about-highlights reveal" aria-label="MIU Beauty değerleri">
+            <div>
+              <strong data-i18n="about.highlightOneTitle">Hijyen</strong>
+              <span data-i18n="about.highlightOneCopy">Her işlemde temiz, düzenli ve güven veren uygulama alanı.</span>
+            </div>
+            <div>
+              <strong data-i18n="about.highlightTwoTitle">Kalite</strong>
+              <span data-i18n="about.highlightTwoCopy">Seçili ürünler ve detaylara önem veren profesyonel bakım.</span>
+            </div>
+            <div>
+              <strong data-i18n="about.highlightThreeTitle">Özen</strong>
+              <span data-i18n="about.highlightThreeCopy">Kişisel stile ve ihtiyaca göre sakin, zarif bir deneyim.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="services" aria-labelledby="services-title">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="section-kicker" data-i18n="services.kicker">Hizmetler</p>
+            <h2 id="services-title" data-i18n="services.title">Bakım rutininiz için rafine uygulamalar</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <span class="service-number">01</span>
+              <h3 data-i18n="services.manicure.title">Manikür</h3>
+              <p data-i18n="services.manicure.copy">Tırnak ve el bakımında temiz, düzgün ve doğal görünümlü sonuç.</p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-number">02</span>
+              <h3 data-i18n="services.pedicure.title">Pedikür</h3>
+              <p data-i18n="services.pedicure.copy">Ayak bakımında konforlu, hijyenik ve özenli uygulama.</p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-number">03</span>
+              <h3 data-i18n="services.lashExtensions.title">İpek Kirpik</h3>
+              <p data-i18n="services.lashExtensions.copy">Göz formunuza uygun, dengeli ve etkileyici kirpik görünümü.</p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-number">04</span>
+              <h3 data-i18n="services.lashLift.title">Kirpik Lifting</h3>
+              <p data-i18n="services.lashLift.copy">Doğal kirpiklerinize kıvrım, açıklık ve bakımlı ifade kazandırır.</p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-number">05</span>
+              <h3 data-i18n="services.nailCare.title">Tırnak Bakımı</h3>
+              <p data-i18n="services.nailCare.copy">Günlük stile uyumlu, bakımlı ve estetik tırnak detayları.</p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-number">06</span>
+              <h3 data-i18n="services.browLash.title">Kaş/Kirpik Bakımı</h3>
+              <p data-i18n="services.browLash.copy">Yüz ifadenizi tamamlayan kaş ve kirpik bakım dokunuşları.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why" aria-labelledby="why-title">
+        <div class="section-inner split-layout">
+          <div class="section-copy reveal">
+            <p class="section-kicker" data-i18n="why.kicker">Neden MIU Beauty?</p>
+            <h2 id="why-title" data-i18n="why.title">Sade lüks, profesyonel uygulama ve güven veren bakım</h2>
+          </div>
+
+          <div class="why-list">
+            <div class="why-item reveal">
+              <span aria-hidden="true"></span>
+              <strong data-i18n="why.quality">Kaliteli ürünler</strong>
+            </div>
+            <div class="why-item reveal">
+              <span aria-hidden="true"></span>
+              <strong data-i18n="why.hygiene">Hijyenik ortam</strong>
+            </div>
+            <div class="why-item reveal">
+              <span aria-hidden="true"></span>
+              <strong data-i18n="why.expert">Uzman uygulama</strong>
+            </div>
+            <div class="why-item reveal">
+              <span aria-hidden="true"></span>
+              <strong data-i18n="why.appointment">Randevulu hizmet</strong>
+            </div>
+            <div class="why-item reveal">
+              <span aria-hidden="true"></span>
+              <strong data-i18n="why.location">Merkezi konum</strong>
+            </div>
+            <div class="why-item reveal">
+              <span aria-hidden="true"></span>
+              <strong data-i18n="why.personal">Zarif ve kişiye özel bakım deneyimi</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="section-kicker" data-i18n="gallery.kicker">Galeri</p>
+            <h2 id="gallery-title" data-i18n="gallery.title">MIU Beauty’den seçili uygulamalar</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <button class="gallery-item reveal" type="button" data-gallery-index="0" aria-label="Cilt bakımı görselini aç">
+              <img src="assets/gallery/gallery-1.jpg" alt="MIU Beauty cilt bakımı uygulaması" loading="lazy" />
+            </button>
+            <button class="gallery-item reveal" type="button" data-gallery-index="1" aria-label="Kaş ve kirpik görselini aç">
+              <img src="assets/gallery/gallery-2.jpg" alt="MIU Beauty kaş ve kirpik uygulaması" loading="lazy" />
+            </button>
+            <button class="gallery-item reveal" type="button" data-gallery-index="2" aria-label="İpek kirpik görselini aç">
+              <img src="assets/gallery/gallery-3.jpg" alt="MIU Beauty ipek kirpik uygulaması" loading="lazy" />
+            </button>
+            <button class="gallery-item reveal" type="button" data-gallery-index="3" aria-label="Renkli manikür görselini aç">
+              <img src="assets/gallery/gallery-4.jpg" alt="MIU Beauty renkli manikür tasarımı" loading="lazy" />
+            </button>
+            <button class="gallery-item reveal" type="button" data-gallery-index="4" aria-label="Mavi tırnak tasarımı görselini aç">
+              <img src="assets/gallery/gallery-5.jpg" alt="MIU Beauty mavi tırnak tasarımı" loading="lazy" />
+            </button>
+            <button class="gallery-item reveal" type="button" data-gallery-index="5" aria-label="Pembe tırnak tasarımı görselini aç">
+              <img src="assets/gallery/gallery-6.jpg" alt="MIU Beauty pembe tırnak tasarımı" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section booking" id="booking" aria-labelledby="booking-title">
+        <div class="section-inner booking-layout">
+          <div class="section-copy reveal">
+            <p class="section-kicker" data-i18n="booking.kicker">Randevu</p>
+            <h2 id="booking-title" data-i18n="booking.title">Randevunuzu WhatsApp üzerinden kolayca oluşturun</h2>
+            <p data-i18n="booking.copy">
+              Formu doldurun; bilgilerinizle hazırlanmış WhatsApp mesajı otomatik açılır. Dilerseniz doğrudan randevu
+              butonunu da kullanabilirsiniz.
+            </p>
+            <a
+              class="button button-primary"
+              href="https://wa.me/905446480648"
+              target="_blank"
+              rel="noopener"
+              data-i18n="booking.directButton"
+            >
+              WhatsApp’tan Randevu Al
+            </a>
+          </div>
+
+          <form class="booking-form reveal" data-booking-form>
+            <label>
+              <span data-i18n="form.name">Ad Soyad</span>
+              <input type="text" name="name" autocomplete="name" data-i18n-placeholder="form.namePlaceholder" placeholder="Adınız Soyadınız" />
+            </label>
+            <label>
+              <span data-i18n="form.phone">Telefon</span>
+              <input type="tel" name="phone" autocomplete="tel" data-i18n-placeholder="form.phonePlaceholder" placeholder="Telefon numaranız" />
+            </label>
+            <label>
+              <span data-i18n="form.service">Hizmet seçimi</span>
+              <select name="service">
+                <option value="" data-i18n="form.servicePlaceholder">Hizmet seçin</option>
+                <option value="Manikür" data-i18n="form.serviceManicure">Manikür</option>
+                <option value="Pedikür" data-i18n="form.servicePedicure">Pedikür</option>
+                <option value="İpek Kirpik" data-i18n="form.serviceLashExtensions">İpek Kirpik</option>
+                <option value="Kirpik Lifting" data-i18n="form.serviceLashLift">Kirpik Lifting</option>
+                <option value="Tırnak Bakımı" data-i18n="form.serviceNailCare">Tırnak Bakımı</option>
+                <option value="Kaş/Kirpik Bakımı" data-i18n="form.serviceBrowLash">Kaş/Kirpik Bakımı</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="form.date">Tercih edilen tarih</span>
+              <input type="date" name="date" />
+            </label>
+            <label class="form-wide">
+              <span data-i18n="form.note">Not</span>
+              <textarea name="note" rows="4" data-i18n-placeholder="form.notePlaceholder" placeholder="Eklemek istediğiniz not"></textarea>
+            </label>
+            <button class="button button-primary form-wide" type="submit" data-i18n="form.submit">WhatsApp Mesajı Oluştur</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="location" aria-labelledby="location-title">
+        <div class="section-inner location-layout">
+          <div class="section-copy reveal">
+            <p class="section-kicker" data-i18n="location.kicker">Konum</p>
+            <h2 id="location-title" data-i18n="location.title">Ataşehir’de merkezi konum</h2>
+            <p class="address" data-i18n="location.address">
+              Atatürk Mah. Turgut Özal Caddesi 62. Ada Gardenya 4, 1. Blok Daire: 2 Ataşehir / İstanbul / Türkiye
+            </p>
+            <a
+              class="button button-secondary"
+              href="https://www.google.com/maps/search/?api=1&query=Atat%C3%BCrk%20Mah.%20Turgut%20%C3%96zal%20Caddesi%2062.%20Ada%20Gardenya%204%201.%20Blok%20Daire%202%20Ata%C5%9Fehir%20%C4%B0stanbul"
+              target="_blank"
+              rel="noopener"
+              data-i18n="location.mapButton"
+            >
+              Google Haritalar’da Aç
+            </a>
+          </div>
+
+          <div class="map-frame reveal" aria-label="MIU Beauty Google Haritalar konumu">
+            <iframe
+              title="MIU Beauty konum haritası"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Atat%C3%BCrk%20Mah.%20Turgut%20%C3%96zal%20Caddesi%2062.%20Ada%20Gardenya%204%201.%20Blok%20Daire%202%20Ata%C5%9Fehir%20%C4%B0stanbul&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="section-kicker" data-i18n="contact.kicker">İletişim</p>
+            <h2 id="contact-title" data-i18n="contact.title">MIU Beauty ile iletişime geçin</h2>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-card reveal" href="tel:+905446480648">
+              <span data-i18n="contact.phoneLabel">Telefon</span>
+              <strong>0544 648 06 48</strong>
+            </a>
+            <a class="contact-card reveal" href="mailto:miunaillounge@gmail.com">
+              <span data-i18n="contact.emailLabel">E-posta</span>
+              <strong>miunaillounge@gmail.com</strong>
+            </a>
+            <div class="contact-card reveal">
+              <span data-i18n="contact.addressLabel">Adres</span>
+              <strong data-i18n="contact.addressValue">Ataşehir / İstanbul</strong>
+            </div>
+            <a class="contact-card reveal" href="https://www.instagram.com/miubeauty.tr/" target="_blank" rel="noopener">
+              <span>Instagram</span>
+              <strong>@miubeauty.tr</strong>
+            </a>
+            <a class="contact-card reveal" href="https://www.facebook.com/miunaillounge/" target="_blank" rel="noopener">
+              <span>Facebook</span>
+              <strong>MIU Beauty</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="#home" aria-label="MIU Beauty ana sayfa">
+          <img src="assets/logo.png" alt="MIU Beauty logo" />
+        </a>
+        <p data-i18n="footer.copy">MIU Beauty - Ataşehir’de güzellik ve bakım deneyimi.</p>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/miubeauty.tr/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/miunaillounge/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <small data-i18n="footer.rights">© 2025 MIU Beauty. Tüm hakları saklıdır.</small>
+      </div>
+    </footer>
+
+    <div class="lightbox" data-lightbox hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Galeriyi kapat">×</button>
+      <img src="" alt="" data-lightbox-image />
+      <p data-lightbox-caption></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Projeyi çalıştırmak için index.html dosyasını tarayıcıda açmanız yeterlidir. -->
